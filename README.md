@@ -30,11 +30,7 @@ git을 왜 사용할까?
 
       브랜치로 모을 수 있습니다.
 
-      
-
-      
-
-[https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FcRPkVU%2FbtquUBRb7GK%2FbGy8lytovCtjsoP9SZKTJ0%2Fimg.jpg](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FcRPkVU%2FbtquUBRb7GK%2FbGy8lytovCtjsoP9SZKTJ0%2Fimg.jpg)
+![https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FcRPkVU%2FbtquUBRb7GK%2FbGy8lytovCtjsoP9SZKTJ0%2Fimg.jpg](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FcRPkVU%2FbtquUBRb7GK%2FbGy8lytovCtjsoP9SZKTJ0%2Fimg.jpg)
 
 - 체크아웃 ( Checkout )
 
@@ -54,7 +50,7 @@ git을 왜 사용할까?
 
       으로 이동하는 의미입니다.
 
-[https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=http%3A%2F%2Fcfile4.uf.tistory.com%2Fimage%2F99F2C13D5B8915132D814A](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=http%3A%2F%2Fcfile4.uf.tistory.com%2Fimage%2F99F2C13D5B8915132D814A)
+![https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=http%3A%2F%2Fcfile4.uf.tistory.com%2Fimage%2F99F2C13D5B8915132D814A](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=http%3A%2F%2Fcfile4.uf.tistory.com%2Fimage%2F99F2C13D5B8915132D814A)
 
 - 페치 ( fetch )
 
