@@ -258,6 +258,197 @@ $ git branch -m 새이름
 
 ### 6. 커밋 메시지 가이드
 
+#### ✉️ Commit Message
+
+commit 메시지를 어떻게 쓸것인가에 대한 간단한 가이드
+
+#### 커밋 메시지가 중요한가요?
+
+- 코드 리뷰 시간을 단축하고 능률적으로 처리하기 위함
+- 변경 사항을 이해하는데 도움을 주려고
+- 코드만으로 설명이 어려운 how to를 설명하기 위해서
+
+#### 어떻게 커밋을 작성하는게 좋을까요?
+
+**모두가 동일한 규칙을 지킨다**
+
+이슈관리 툴은 어떤걸 사용해도 상관없습니다  ( Jira, GitLab 등등 )
+
+- 작업을 시작하기전에 미리 이슈등록을 합니다
+- 하나의 이슈에 대해서 되도록 하나의 커밋으로 처리합니다.
+- 자신의 Pull Request는 스스로 merge 합니다.
+
+**명확한 어투 사용**
+
+```jsx
+🥰 **좋음!**
+
+Refactor() 함수을 사용하여, 기존에 중복되었던 
+코드를 리팩토링 처리합니다
+
+😭 **나쁨!**
+Refactor() 함수을 사용하여, 기존에 중복되었던 
+코드를 리팩토링 처리했습니다
+    
+```
+
+**소스코드를 보지 않고 변경사항을 알 수 있도록 하기**
+
+```jsx
+🥰 **좋음!**
+
+텍스트 상자와 레이아웃 프레임 사이 왼쪽 간격 늘림
+학습모델 상세팝업 화면을 MediaQuery를 사용하여, 반응형 처리
+
+😭 **나쁨!
+
+CSS 조정**
+학습모델 상세화면 개선
+```
+
+**커밋 메시지 본문으로 "왜", "무엇", "어떻게" 변경했는지, 상세 내용 추가 설명하기**
+
+```jsx
+🥰 **좋음!**
+
+알림창 라이브러리(sweetAlert) 버전 업그레이드
+
+sweetAlert 1 최신 버전 적용 ( 1.2.1 )
+- 버전 문제로 인하여 동기화 문제가 있었음 
+- 새로운 버전은 Promise 패턴과 async await 패턴 적용 가능
+
+```
+
+**맥락없는** **메시지 사용 자제하기**
+
+```jsx
+😭 **나쁨!**
+
+이거 고침, 저거 고침
+버그 수정
+버전 업그레이드
+요렇게 수정함, 저렇게 수정함
+```
+
+**행과 글자수 제한하기**
+
+제목은 50자, 본문은 72자로 한줄에 들어갈 수 있는 글자 수를 제한하는것이 권장됩니다.
+
+제목으로 어떠한 작업을 했는지 유추가 가능해야 합니다.
+
+#### 🎲 Conventional Commits을 적용해보자!
+
+Conventional Commit 스펙은 명확한 커밋 히스토리를 생성하기 위한 간단한 규칙을 제공하기 위해서 만들어진 규칙입니다.
+
+```jsx
+<타입>[적용 범위(선택 사항)]: <설명>
+
+[본문(선택 사항)]
+
+[꼬리말(선택 사항)]
+```
+
+💡 **Commit Type**
+
+커밋 메시지 제목에 접두사로 의도를 파악할 수 있습니다.
+
+- fix : 버그 패치
+- feat : 새로운 기능 추가
+- refactor! : 리팩토링
+- docs : 문서파일 수정 ex) Readme.md
+- style : 코드 포맷팅, 세미콜론 누락, 코드 변경이 없는 경우
+- test : 테스트 코드, 리팩토링 테스트 코드 추가
+- chore : 빌드 업무 수정, 패키지 매니저 수정
+
+**Example**
+
+```jsx
+fix : swal 알림창 버전 문제로 인한 코드 수정
+
+기존 코드 A에서 코드 B로 변경
+
+// 코드리뷰가 필요한 경우
+Revieweb-by : @javapark
+
+// 이슈번호 참조
+Refs #32 
+```
+
+#### 😊 Emoji를 활용해보자
+
+commit 타입을 붙이지 않고, Emoji를 통해서 커밋 타입을 분류할 수 있습니다.
+
+[Emoji CheatSheet](https://www.notion.so/ca168a7bbff54ef4be8e2514823ac9e8)
+
+**Example**
+
+```jsx
+// raw 코드를 입력하면 emoji를 지원하는 경우 자동으로 아이콘으로 변경됩니다
+
+🔥 사용하지 않는 v2버전 jsp 파일 제거
+
+- 현재 UI 버전에서 v2 관련 폴더는 사용하지 않으므로 제거함 
+
+Refs #33
+```
+
+#### 🎲 Gitlab 에서 커밋과 같이 issue를 닫아보자
+
+**종료 Keyword**
+
+- close
+- closes
+- closed
+- fix
+- fixes
+- fixed
+- resolve
+- resolves
+- resolved
+
+Commit 메시지에 키워드를 지정하게 되면 이슈넘버 ( #33), closed( 종료 키워드) 가 있기 때문에 
+
+push할 경우 #33번 이슈가 종료되고 push가 완료됩니다.
+
+**Example**
+
+```jsx
+🔥 사용하지 않는 v2버전 jsp 파일 제거
+
+현재 UI 버전에서 v2 관련 폴더는 사용하지 않으므로 제거함 
+
+closed #33
+
+Refs #33
+```
+
+또한 한 커밋에 여러개의 이슈 넘버가 있는 경우 같이 종료 할 수 있습니다. 
+
+( rebase로 커밋을 합친경우 )
+
+**Example**
+
+```jsx
+🔥 사용하지 않는 v2버전 jsp 파일 제거
+
+현재 UI 버전에서 v2 관련 폴더는 사용하지 않으므로 제거함 
+
+closed #33, #34, #35
+
+Refs #33
+```
+
+#### **출처**
+
+[https://doublesprogramming.tistory.com/256](https://doublesprogramming.tistory.com/256)
+
+[https://www.conventionalcommits.org/ko/v1.0.0/](https://www.conventionalcommits.org/ko/v1.0.0/)
+
+[https://www.hahwul.com/2018/07/closing-git-issue-with-commit.html](https://www.hahwul.com/2018/07/closing-git-issue-with-commit.html)
+
+[https://github.com/carloscuesta/gitmoji-cli](https://github.com/carloscuesta/gitmoji-cli)
+
+
 ### 7. Rebase vs Merge 전략
 
 ### 8. 배포 전략
